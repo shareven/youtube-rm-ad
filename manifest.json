@@ -2,7 +2,7 @@
     "name": "Automatically skip YouTube ads",
     "version": "1.0",
     "description": "Automatically skip YouTube ads",
-    "permissions": ["activeTab","declarativeContent","storage", "https://www.youtube.com/*"],
+    "permissions": ["activeTab","declarativeContent","storage", "https://www.youtube.com/*","https://www.google.com/*"],
     
     "content_scripts": [
         {
@@ -12,6 +12,15 @@
             "run_at": "document_idle",
             "js": [
                 "myscript.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.google.com/*"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "googlego.js"
             ]
         }
     ],
