@@ -6,4 +6,4 @@ window.setInterval(()=>{
 var list=document.querySelectorAll("a");
 list.forEach(e => {
    e.target="_blank";
-});
+}); 
